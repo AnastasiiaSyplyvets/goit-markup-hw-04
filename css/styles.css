@@ -450,20 +450,19 @@ display: flex;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-  fill: #AFB1B8;
+  color: #AFB1B8;
 }
  .client-link:hover,
  .client-link:focus {
-  fill: var(--accent-color-primary);
   border-color:var(--accent-color-primary);
   color:#2196f3;
 }
  
 
-.client-link .client-logo:hover,
-.client-link .client-logo:focus{
-  fill:#2196f3;
+.client-logo {
+  fill:currentColor;
 }
+
 /* Footer */
 
 
@@ -666,9 +665,7 @@ fill: var(--accent-color-secondary);
   color: var(--primary-text-color);
   margin-top: 0;
 }
-.product-image {
-  margin-bottom: 20px;
-}
+
 .products-title {
   color: var(--title-text-color);
 
@@ -692,5 +689,5 @@ fill: var(--accent-color-secondary);
   border-top:none;
 
   padding:20px 24px;
-  padding-top:0;
+  padding-top:20px;
 }
