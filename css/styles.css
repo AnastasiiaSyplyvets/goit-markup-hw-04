@@ -86,6 +86,8 @@ a {
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
+
+
 /* site-nav стилизация меню, нав */
 .main-nav {
   display:flex;
@@ -121,6 +123,11 @@ a {
 .site-nav .link:hover {
   color: var(--title-text-color);
 }
+
+.site-nav .site-nav-item:hover,
+.site-nav .site-nav-item:focus{
+  color: var(--accent-color-primary);
+}
 /* auth-nav стилизация контактов */
 .auth-nav {
   display:flex;
@@ -146,6 +153,7 @@ a {
 .auth-nav .link-mail:hover,
 .auth-nav .link-mail:focus {
   color: var(--accent-color-primary);
+  fill: var(--accent-color-primary);
 }
 .auth-nav .link-tel {
   color: var(--primary-text-color);
@@ -155,15 +163,21 @@ a {
   align-items: center;
 }
 
+.link-tel:hover,
+.link-tel:focus{
+  color:var(--accent-color-primary);
+  fill:#2196f3;
+}
+
 .mail-icon{
   margin-right: 10px;
   margin-bottom: 0;
 }
 
-.icon-mail .mail-icon:hover,
+/* .icon-mail .mail-icon:hover,
 .icon-mail .mail-icon:focus {
   fill: var(--accent-color-primary);
-}
+} */
 /* .icon-tel {
   display:flex;
 } */
@@ -387,9 +401,10 @@ justify-content: space-between;
 
 }
 .icon .social-link:hover,
-.icon .scosial-link:focus{
+.icon .scosial-link:focus {
   fill: var(--accent-color-secondary);
   background-color: var(--accent-color-primary);
+  cursor: pointer;
 }
 
 /* .team-icon:visited{
@@ -413,15 +428,8 @@ justify-content: space-between;
 
 }
 .clients .item{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
-  height: 92px;
   /* background-color:teal; */
   margin-right:30px;
-  border: 1px solid #AFB1B8;
-  border-radius: 4px;
 }
 
 .clients .item:last-of-type{
@@ -430,13 +438,32 @@ justify-content: space-between;
 
   .clients-list {
   display:flex;
-
 }
 .client-logo {
   fill: #AFB1B8;
 }
+.client-link {
+display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  fill: #AFB1B8;
+}
+ .client-link:hover,
+ .client-link:focus {
+  fill: var(--accent-color-primary);
+  border-color:var(--accent-color-primary);
+  color:#2196f3;
+}
+ 
 
-
+.client-link .client-logo:hover,
+.client-link .client-logo:focus{
+  fill:#2196f3;
+}
 /* Footer */
 
 
@@ -488,14 +515,15 @@ justify-content: space-between;
 }
 .signup{
   padding-top: 12px;
-  padding-bottom: 100px;
+  
 
 }
 .signup-title {
   text-transform: uppercase;
   color: var(--accent-color-secondary);
   font-weight: 700;
-  letter-spacing: 0.3;
+  font-size: 14px;
+  letter-spacing: 0.03em;
   margin-bottom: 20px;
 }
 .footer-icon {
